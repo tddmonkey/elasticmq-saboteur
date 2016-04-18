@@ -1,7 +1,7 @@
 FROM tddmonkey/elasticmq
 MAINTAINER zodiaczx6@gmail.com
 
-RUN apt-get update && apt-get install -y supervisor wget
+RUN apt-get update && apt-get install -y supervisor wget iptables
 RUN mkdir -p /var/log/supervisor
 RUN wget -P /tmp https://github.com/tomakehurst/saboteur/releases/download/v0.7/saboteur_0.7_all.deb && dpkg --install /tmp/saboteur_0.7_all.deb 
 
